@@ -1,2 +1,2 @@
 # wifi-manager
-WIFI项目后台管理界面----Vue构建
+Vue构建WIFI项目后台管理界面
