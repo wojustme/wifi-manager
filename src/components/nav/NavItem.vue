@@ -7,12 +7,19 @@
  * @version   0.0.1
  */
 <template>
-  <div class="nav-item">
-    dss
+  <div
+    class="nav-item"
+  >
+    <img
+      :src="url"
+      @click="clickNavItem()"
+    />
   </div>
 </template>
 
 <script>
+import { IMG_SERVER } from '../../config/Configure'
+
 export default {
   name: 'NavItem',
   props: ['name', 'isSelect'],
@@ -22,15 +29,23 @@ export default {
   },
   computed: {
     url() {
-      console.log();
-      return "../../assets/images/nav/角色导航.png"
+      let postfix = this.isSelect ? "_selected.png" : ".png"
+      return IMG_SERVER + this.name + postfix
+    }
+  },
+  methods: {
+    clickNavItem() {
+      this.$emit('clickNavItem',this.name)
     }
   }
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   div.nav-item {
     height: 80px;
+    img {
+      cursor: pointer;
+    }
   }
 </style>

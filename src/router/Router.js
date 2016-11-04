@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import App from '../App.vue'
+import App from '../components/App'
 import Hello1 from '../components/Hello1'
 import Hello2 from '../components/Hello2'
 

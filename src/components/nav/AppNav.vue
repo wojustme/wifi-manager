@@ -8,21 +8,47 @@
  */
 <template>
   <div>
-    <NavItem name="角色导航" />
-    <NavItem name="角色导航" />
-    <NavItem name="角色导航" />
-    <NavItem name="角色导航" />
+    <NavHeader
+      name="导航标题"
+    />
+    <div>
+      <NavItem
+        v-for="navStatus, navName in navItems"
+        :name="navName"
+        :isSelect="navStatus"
+        @clickNavItem="clickNavItem"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 import NavItem from './NavItem'
-
+import NavHeader from './NavHeader'
 
 export default {
   name: 'AppNav',
   components: {
-    NavItem
+    NavItem,
+    NavHeader
+  },
+  data() {
+    return {
+      navItems: {
+        "租户导航": true,
+        "用户导航": false,
+        "权限导航": false,
+        "角色导航": false
+      },
+      selectNav: "租户导航"
+    }
+  },
+  methods: {
+    clickNavItem(navName) {
+      this.navItems[this.selectNav] = false
+      this.navItems[navName] = true
+      this.selectNav = navName
+    }
   }
 }
 </script>
@@ -30,6 +56,5 @@ export default {
 <style lang="css" scoped>
   div {
     width: 238px;
-    background-color: red;
   }
 </style>

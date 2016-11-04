@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import AppNav from './components/nav/AppNav'
+import AppNav from './nav/AppNav'
 
 export default {
   name: 'App',
@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   div.left-nav {
     float: left;
     width: 238px;
