@@ -6,12 +6,9 @@
  * @copyright 城云科技
  * @version   0.0.1
  */
-<template>
-  <div>
-    <img
-      :src="url"
-    />
-  </div>
+<template lang="jade">
+div
+  img(:src="url")
 </template>
 
 <script>
@@ -27,8 +24,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-  div {
-    height: 79px;
-  }
+<style lang="stylus" scoped>
+div
+  height: 79px
 </style>

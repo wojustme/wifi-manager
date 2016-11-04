@@ -6,20 +6,16 @@
  * @copyright 城云科技
  * @version   0.0.1
  */
-<template>
-  <div>
-    <NavHeader
-      name="导航标题"
-    />
-    <div>
-      <NavItem
-        v-for="navStatus, navName in navItems"
-        :name="navName"
-        :isSelect="navStatus"
-        @clickNavItem="clickNavItem"
-      />
-    </div>
-  </div>
+<template lang="jade">
+div
+  NavHeader(name="导航标题")
+  div
+    NavItem(
+      v-for="navStatus, navName in navItems",
+      :name="navName",
+      :isSelect="navStatus",
+      @clickNavItem="clickNavItem"
+    )
 </template>
 
 <script>
@@ -53,8 +49,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
-  div {
-    width: 238px;
-  }
+<style lang="stylus" scoped>
+div
+  width: 238px
 </style>

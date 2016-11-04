@@ -6,15 +6,12 @@
  * @copyright 城云科技
  * @version   0.0.1
  */
-<template>
-  <div
-    class="nav-item"
-  >
-    <img
-      :src="url"
-      @click="clickNavItem()"
-    />
-  </div>
+<template lang="jade">
+.nav-item
+  img(
+    :src="url",
+    @click="clickNavItem()"
+  )
 </template>
 
 <script>
@@ -41,11 +38,9 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-  div.nav-item {
-    height: 80px;
-    img {
-      cursor: pointer;
-    }
-  }
+<style lang="stylus" scoped>
+.nav-item
+  height: 80px
+  img
+    cursor: pointer
 </style>

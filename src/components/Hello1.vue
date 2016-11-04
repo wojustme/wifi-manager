@@ -1,8 +1,8 @@
 
-<template>
-  <div>
-    <h1>{{ msg }}</h1>
-  </div>
+<template  lang="jade">
+div
+  h1(re="fsdfs") ok{{msg}}
+  .c rewre
 </template>
 
 <script>
@@ -10,15 +10,17 @@ export default {
   name: 'Hello1',
   computed: {
     msg () {
-	    return 'store.state.msg'
+	    return '这是Hello1'
     }
   }
 }
 </script>
 
-<style lang="less" scoped>
-h1, h2 {
-  font-weight: normal;
-  font: red;
-}
+<style lang="stylus" scoped>
+div
+  h1
+    font-weight: normal
+    border 1px solid #eee
+  .c
+    border 1px solid #eee
 </style>
