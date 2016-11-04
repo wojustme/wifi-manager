@@ -3,27 +3,29 @@ div
   .left-nav
     AppNav
   .right-main
-    主体部分
+    MainBody
     router-view
 </template>
 
 <script>
 import AppNav from './nav/AppNav'
-
+import MainBody from './main/body/MainBody'
 export default {
   name: 'App',
   components: {
-    AppNav
+    AppNav,
+    MainBody
   }
 }
 </script>
 
 <style lang="stylus" scoped>
 .left-nav
-  float: left;
-  width: 238px;
-  height: auto;
+  float: left
+  width: 238px
+  height: auto
 .right-main
-  float: left;
-  margin-left: 20px;
+  float: left
+  margin-left: 20px
+  width: 80%
 </style>
