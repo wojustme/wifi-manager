@@ -19,7 +19,7 @@
 <script>
 import { IMG_SERVER } from '../config/Configure'
 
-import AppNav from './nav/AppNav'
+import AppNav from './appNav/AppNav'
 import MainBody from './main/body/MainBody'
 
 

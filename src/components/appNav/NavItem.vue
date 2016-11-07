@@ -10,11 +10,12 @@
 .nav-item
   img(
     :src="url",
-    @click="clickNavItem()"
+    @click="appNav_clickNavItem(name)"
   )
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import { IMG_SERVER } from '../../config/Configure'
 
 export default {
@@ -31,9 +32,9 @@ export default {
     }
   },
   methods: {
-    clickNavItem() {
-      this.$emit('clickNavItem',this.name)
-    }
+    ...mapActions([
+      'appNav_clickNavItem'
+    ])
   }
 }
 </script>

@@ -13,12 +13,13 @@ div
     NavItem(
       v-for="navStatus, navName in navItems",
       :name="navName",
-      :isSelect="navStatus",
-      @clickNavItem="clickNavItem"
+      :isSelect="navStatus"
     )
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 import NavItem from './NavItem'
 import NavHeader from './NavHeader'
 
@@ -28,23 +29,11 @@ export default {
     NavItem,
     NavHeader
   },
-  data() {
-    return {
-      navItems: {
-        "租户导航": true,
-        "用户导航": false,
-        "权限导航": false,
-        "角色导航": false
-      },
-      selectNav: "租户导航"
-    }
-  },
-  methods: {
-    clickNavItem(navName) {
-      this.navItems[this.selectNav] = false
-      this.navItems[navName] = true
-      this.selectNav = navName
-    }
+  computed: {
+    ...mapGetters({
+      navItems: 'navItems',
+      selectNav: 'selectNav'
+    })
   }
 }
 </script>
