@@ -8,7 +8,7 @@
  */
 <template lang="jade">
 div
-  HeaderTitle
+  HeaderTitle(headerName="租户分组")
 </template>
 
 <script>
@@ -22,5 +22,5 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="less" scoped>
 </style>

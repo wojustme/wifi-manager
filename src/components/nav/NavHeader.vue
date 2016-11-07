@@ -24,7 +24,10 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-div
-  height: 79px
+<style lang="less" scoped>
+div {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(255, 255, 255);
+}
 </style>

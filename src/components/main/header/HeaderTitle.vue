@@ -17,20 +17,22 @@ export default {
   name: 'HeaderTitle',
   data() {
     return {
-      headerName: '租户分组'
     }
-  }
+  },
+  props: ['headerName']
 }
 </script>
 
-<style lang="stylus" scoped>
-div
-  text-align: center
-  width: 100%
-  height: 80px
-  line-height: 80px
-  text-decoration: underline
-  font-weight: normal
-  color: rgb(131, 209, 212)
+<style lang="less" scoped>
+div {
+  text-align: center;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  text-decoration: underline;
+  font-weight: normal;
+  color: rgb(131, 209, 212);
+  background-color: rgb(255, 255, 255);
+}
 
 </style>

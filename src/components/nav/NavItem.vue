@@ -38,9 +38,11 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-.nav-item
-  height: 80px
-  img
-    cursor: pointer
+<style lang="less" scoped>
+.nav-item {
+  height: 80px;
+  img {
+    cursor: pointer;
+  }
+}
 </style>

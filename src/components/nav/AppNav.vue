@@ -9,7 +9,7 @@
 <template lang="jade">
 div
   NavHeader(name="导航标题")
-  div
+  div.nav-item
     NavItem(
       v-for="navStatus, navName in navItems",
       :name="navName",
@@ -49,7 +49,11 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-div
-  width: 238px
+<style lang="less" scoped>
+div {
+  width: 100%;
+  .nav-item {
+    width: 238px;
+  }
+}
 </style>

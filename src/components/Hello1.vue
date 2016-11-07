@@ -16,11 +16,15 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-div
-  h1
+<style lang="less" scoped>
+div {
+  h1 {
+    fon
     font-weight: normal
     border 1px solid #eee
-  .c
-    border 1px solid #eee
+  }
+  .c {
+    color: red;
+  }
+}
 </style>
